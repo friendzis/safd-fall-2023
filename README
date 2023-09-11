@@ -1,0 +1,5 @@
+A quick and dirty solution for Academy.
+
+Task: check palindrominess of a date, constructed from a year and reversed year.
+
+Solution: sidestep most edge cases (e.g. years earlier than 1000) by limiting acceptable dates to those in ISO 8601 (>1582, <10000), avoid the rest by delegating logic to date parser. Send parsing exceptions into a black hole and print (as per reqs, a Collection would be more testable ¯\_(ツ)_/¯) the rest. Should be fine if there are no date parsing bugs in your JDK implementation.
